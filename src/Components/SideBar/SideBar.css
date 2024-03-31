@@ -1,0 +1,131 @@
+/* Reset default styles for all elements */
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.SideBar-container {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.icon {
+  margin-bottom: 10px; /* Adjust the spacing between icons */
+}
+
+.icon:last-child {
+  margin-top: auto; /* Position the last two icons at the bottom */
+  margin-bottom: 20px;
+}
+.icon:nth-last-child(2){
+  margin-top: 210px;
+}
+
+
+.hovered {
+  background-color: #ccc; /* Example hover effect */
+}
+
+.Licon {
+  display: block;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* Styles for the sidebar container */
+.SideBar-container {
+  border-right: 1px solid rgb(61, 59, 59);
+  display: flex;
+  flex-direction: column;
+  width: 60px;
+  position: fixed;
+  height: 90vh;
+  gap: 1rem;
+  padding-left: 20px;
+  background-color: rgb(233, 238, 238); /* Background color when expanded */
+  transition: width 0.3s, background-color 0.3s;
+  z-index: 1;
+}
+
+.SideBar-container:hover {
+  width: 160px; /* Width when expanded on hover */
+}
+
+/* Styles for individual icons */
+.icon {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 10px;
+  padding: 5px;
+  width: 25px;
+  height: 25px;
+  position: relative; /* Add this line */
+}
+
+/* Styles for icon names */
+.Licon {
+  position: absolute;
+  left: 60px; /* Adjust the distance as needed */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Center vertically */
+  color: #212121;
+  cursor: pointer;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s;
+}
+
+.icon:hover .Licon {
+  opacity: 1; /* Show on hover */
+  font-size: 15px;
+  border: .5px solid black;
+  padding: 3px 8px;
+  background-color: #859cdc;
+  color: #fff;
+  border-radius: 2px;
+}
+
+.icon:hover {
+  background-color: #2980b9;
+  width: 50px;
+  height: 30px;
+} 
+
+/* Add more styles for specific icons if needed */
+.inprocess,
+.ready,
+.delivery,
+.campaigns,
+.expenses,
+.inventory,
+.insights,
+.setting {
+  width: 20px;
+  height: 20px;
+}
+
+.inventory {
+  width: 25px ;
+  height: 25px ;
+  display: inline-block;
+}
+
+.ready {
+  position: relative;
+}
+
+/* Add hover styles for specific icons if needed */
+.inprocess:hover,
+.ready:hover,
+.delivery:hover,
+.campaigns:hover,
+.expenses:hover,
+.inventory:hover,
+.insights:hover,
+.setting:hover {
+  cursor: pointer;
+  /* Add cursor pointer or other styles as needed for each specific icon */
+}

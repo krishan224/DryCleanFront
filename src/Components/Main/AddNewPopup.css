@@ -1,0 +1,68 @@
+
+
+.container {
+    max-width: 500px;
+    height: 450px;
+    max-height: 500px;
+    margin-top: 70px;
+    margin-left: 300px;
+    margin-bottom: 100px;
+    display: flex;
+    border-radius: 3px;
+    flex-direction: column;
+    z-index: 999;
+    /* align-items: center; */
+    background-color: rgb(230, 234, 243);
+}
+.MainHadding{
+  z-index: 9999;
+  margin: 0 auto 20px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  max-height: 40px;
+  font-weight: 800;
+  border-bottom: 2px solid #000;
+}
+.formContainer{
+  position: relative;
+  margin-top: 10px;
+  margin-left: 40px;
+}
+label{
+  font-size: 15px;
+  font-weight: 600;
+}
+.container form input{
+  height: 30px;
+  width: 250px;
+  margin-top: 10px;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+}
+.closePopupBtn{
+  margin-left: 380px;
+  position: relative;
+  width: 70px;
+  text-transform: uppercase;
+  height: 30px;
+  bottom: 0px;
+  top:20px;
+  color: rgb(230, 232, 234);
+  background-color: rgb(108, 16, 16);
+
+}
+.SaveBtn{
+  margin-left: 230px;
+  position: relative;
+  bottom: 0px;text-transform: uppercase;
+  height: 30px;
+  top: 50px;
+  color: rgb(230, 232, 234);
+  background-color: #185527;
+  padding: 0px 5px;
+
+}
