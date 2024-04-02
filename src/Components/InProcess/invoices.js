@@ -3,7 +3,7 @@ const invoice=[{
     "invoiceNo": "12345",
     "date": "2023-03-08",
     "customerName": "John Doe",
-    "customerPhoneNo": "123-456-7890",
+    "customerPhoneNo": "7579797948",
     "status": "Paid",
     "deliveryDate": "2023-03-15"
   },
