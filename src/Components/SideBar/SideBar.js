@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './SideBar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -11,6 +11,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { MdOutlineInventory } from 'react-icons/md';
 import Inprocess from '../InProcess/Inprocess';
+import Main from '../Main/Main'
 
 const icons = [
   { name: 'Inprocess', icon: faCircleHalfStroke },
@@ -38,21 +39,6 @@ const SideBar = () => {
     setActiveItem(itemName);
   };
 
-  // Implement a custom hook (or separate component) to manage blocking
-  const useBlockPage = (isActive) => {
-    useEffect(() => {
-      if (isActive) {
-        // Add logic to block the main page (e.g., modal, overlay)
-        document.body.classList.add('page-blocked');
-      } else {
-        // Unblock the main page
-        document.body.classList.remove('page-blocked');
-      }
-    }, [isActive]);
-  };
-
-  useBlockPage(activeItem === 'Inprocess'); // Call the hook to block on Inprocess
-
   return (
     <div className="body">
       <div className="SideBar-container">
@@ -75,7 +61,13 @@ const SideBar = () => {
           </div>
         ))}
       </div>
-      {activeItem === 'Inprocess' && <Inprocess/>}
+      {activeItem === 'Inprocess' ? (
+        <Inprocess />
+      ) : (
+        <div className="MainComponent">
+          <Main/>
+        </div>
+      )}
     </div>
   );
 };
