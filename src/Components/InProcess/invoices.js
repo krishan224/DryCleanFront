@@ -16,4 +16,4 @@ const invoice=[{
     "deliveryDate": "2023-03-16"
   }
 ]
-export default invoice
+export default invoice;
